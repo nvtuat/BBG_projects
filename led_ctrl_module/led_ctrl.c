@@ -247,8 +247,8 @@ static int __init exam_init(void)
 static void __exit exam_exit(void)
 {
 	printk(KERN_INFO "goodbye\n");
-	// kobject_put(kobj);
-	// set_pin_value(0);
+	kobject_put(kobj);
+	set_pin_value(0);
 	iounmap(gpio_base);
 	printk(KERN_INFO "exit\n");
 }
